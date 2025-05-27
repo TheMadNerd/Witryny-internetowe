@@ -13,7 +13,7 @@ services:
       - php
     networks:
       - pg-network
-  
+
   db:
     build:
       context: .
@@ -22,7 +22,10 @@ services:
       - "5433:5432"
     networks:
       - pg-network
-  
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
   php:
     build:
       context: .
@@ -31,18 +34,24 @@ services:
       - .:/app
     networks:
       - pg-network
-  
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ${POSTGRES_DB}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASS: ${POSTGRES_PASSWORD}
+
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: pg-admin2
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
       - "5050:80"
     networks:
       - pg-network
-  
+
 networks:
   pg-network:
 

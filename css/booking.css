@@ -1,0 +1,114 @@
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.error, .success {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.error {
+    background-color: #fdecea;
+    color: #c0392b;
+}
+
+.success {
+    background-color: #eafaf1;
+    color: #27ae60;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.container p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+form {
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+form select,
+form input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form select:focus,
+form input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #219150;
+}
+
+.tutor-card {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.tutor-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
